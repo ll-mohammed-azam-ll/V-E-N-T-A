@@ -475,7 +475,7 @@ function playBackgroundVideoOnce() {
      */
     function handleCommand(cmd) {
       switch (cmd) {
-        case 'story':
+        case 'launch -venta':
           blinkFlashlight();
           clearTerminal();
           startLambdaHorrorStory();
@@ -883,7 +883,7 @@ case "reset voice":
 
 function showHelp() {
   const commands = [
-    { cmd: 'story', desc: 'Start the Lambda horror story sequence.' },
+    { cmd: 'launch -venta', desc: 'Start the Lambda horror story sequence.' },
     { cmd: 'video', desc: 'Play the background video once.' },
     { cmd: 'countdown', desc: 'Start a countdown timer with vibration.' },
     { cmd: 'sound', desc: 'Play a one-time sound effect.' },
@@ -1911,7 +1911,7 @@ function getBootMessage(count, playerID) {
   let followUp = ``;
 
   if (count === 1) {
-    followUp = `>> Type "launch-venta" or "help" to begin...`;
+    followUp = `>> Type "launch -venta" or "help" to begin...`;
     updateLambdaProgress(
   "Initialization incomplete—summon the VENTA terminal to unlock your path beyond the veil.",
   "launch-venta"
